@@ -1,8 +1,8 @@
 # DeepSeek Worker UI (Password Gate + Donate)
 
-## Where to modify (超清晰)
+## Where to modify
 - `src/config.js`：
-  - `CHAT_PASSWORD`：进页面输入的密码（Worker 也会校验）
+  - `CHAT_PASSWORD`：进页面输入的密码
   - `MODELS` / `DEFAULT_MODEL`：模型列表与默认值
   - `PROMPT_1` / `PROMPT_2`：内置人物模板（网页看不到）
 
