@@ -47,9 +47,6 @@
   const LS_PROMPT_ENABLED = "cfw_prompt_enabled";
   const LS_CUSTOM_PROMPT = "cfw_custom_prompt_v1";
 
-  // ✅ 页面密码：每次进页面都弹窗（不落盘）
-  let chatPassword = null;
-
   let useBuiltin = (localStorage.getItem(LS_USE_BUILTIN) ?? "1") === "1";
   personaToggle.textContent = useBuiltin ? "😈" : "😇";
 
@@ -281,16 +278,6 @@
     updateSpacer();
     if (stick) scrollToBottom();
   });
-
-  // ✅ 进页面弹窗要密码（你要的“最完美版本”行为）
-  function askPasswordForever(){
-    while (!chatPassword) {
-      const input = prompt("请输入聊天密码:");
-      if (input === null) continue;
-      chatPassword = input.trim();
-      if (!chatPassword) chatPassword = null;
-    }
-  }
 
   async function send(){
     updateSpacer();
